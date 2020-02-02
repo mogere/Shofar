@@ -37,6 +37,7 @@ public class Members extends AppCompatActivity {
                 Toast.makeText(Members.this, member, Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(Members.this,MemberInfo.class);
                 intent.putExtra("Member", member);
+                startActivity(intent);
             }
         });
 

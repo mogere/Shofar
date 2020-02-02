@@ -19,7 +19,7 @@ public class MemberInfo extends AppCompatActivity {
 
         ButterKnife.bind(this);
         Intent intent = getIntent();
-        String memberName = intent.getStringExtra("member");
+        String memberName = intent.getStringExtra("Member");
         mName.setText(memberName);
     }
 }
