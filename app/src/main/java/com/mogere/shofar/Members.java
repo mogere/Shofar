@@ -18,7 +18,9 @@ public class Members extends AppCompatActivity {
 
     @BindView(R.id.listView) ListView mListView;
     private String[] members = new String[] {"Justice Nyaga", "Lauren Mokonoi",
-            "Paul Nyaga", "Michael James", "Sheila Moraa", "Sheryl Kerubo"};
+            "Paul Nyaga", "Michael James", "Sheila Moraa", "Sheryl Kerubo", "Kim Wangai"};
+    private String[] info = new String[] {"Tenor", "Soprano",
+            "Tenor", "Bass", "Alto", "Alto"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +28,15 @@ public class Members extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        MembersAdapterArray adapter = new MembersAdapterArray(this, android.R.layout.simple_list_item_1, members);
+        MembersAdapterArray adapter = new MembersAdapterArray(this, android.R.layout.simple_list_item_1, members, info);
         mListView.setAdapter(adapter);
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String member = ((TextView)view).getText().toString();
-
-                Toast.makeText(Members.this, member, Toast.LENGTH_LONG).show();
+                String info = ((TextView)view).getText().toString();
+                Toast.makeText(Members.this, member, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Members.this,MemberInfo.class);
                 intent.putExtra("Member", member);
                 startActivity(intent);

@@ -7,11 +7,13 @@ public class MembersAdapterArray extends ArrayAdapter {
 
     private Context mContext;
     private String[] mMembers;
+    private String[] mInfo;
 
-    public MembersAdapterArray(Context mContext, int resource, String[] mMembers){
+    public MembersAdapterArray(Context mContext, int resource, String[] mMembers, String[] mInfo){
         super(mContext, resource);
         this.mContext = mContext;
         this.mMembers = mMembers;
+        this.mInfo=mInfo;
     }
 
     @Override
