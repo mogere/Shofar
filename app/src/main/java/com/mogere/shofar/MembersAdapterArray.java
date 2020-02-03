@@ -13,13 +13,14 @@ public class MembersAdapterArray extends ArrayAdapter {
         super(mContext, resource);
         this.mContext = mContext;
         this.mMembers = mMembers;
-        this.mInfo=mInfo;
+        this.mInfo = mInfo;
     }
 
     @Override
     public Object getItem(int position) {
-        String restaurant = mMembers[position];
-        return restaurant;
+        String member = mMembers[position];
+        String voicepart = mInfo[position];
+        return String.format("%s \nSings: %s in the choir", member, voicepart);
     }
 
     @Override
