@@ -18,9 +18,10 @@ public class Members extends AppCompatActivity {
 
     @BindView(R.id.listView) ListView mListView;
     private String[] members = new String[] {"Justice Nyaga", "Lauren Mokonoi",
-            "Paul Nyaga", "Michael James", "Sheila Moraa", "Sheryl Kerubo", "Kim Wangai"};
+            "Paul Nyaga", "Michael James", "Sheila Moraa", "Sheryl Kerubo", "Kim Wangai","Yvonne Abungu",
+    "David Lango", "Lydia Hobbi", "Rael Kananu"};
     private String[] info = new String[] {"Tenor", "Soprano",
-            "Tenor", "Bass", "Alto", "Alto", "bass"};
+            "Tenor", "Bass", "Alto", "Alto", "bass", "Soprano","Bass", "Soprano", "Soprano"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
