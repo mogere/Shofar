@@ -10,7 +10,7 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @BindView(R.id.get_started) Button mGetStarted;
 
@@ -20,14 +20,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
-        mGetStarted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Members.class);
-                startActivity(intent);
-            }
-        });
-
+        mGetStarted.setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(MainActivity.this, Members.class);
+        startActivity(intent);
+    }
 }
