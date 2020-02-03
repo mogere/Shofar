@@ -9,8 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MemberInfo"></activity>
+        <activity android:name=".MemberInfo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mogere.shofar.Members" />
+        </activity>
         <activity android:name=".Members" />
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.mogere.shofar.MainActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/NoActionBarTheme">
